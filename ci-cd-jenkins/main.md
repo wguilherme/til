@@ -75,3 +75,7 @@ services:
       # - POSTGRES_USER=tasks_user
       - POSTGRES_PASSWORD=password
 ```
+
+O ip dos containers que você cria via toolbox não é o localhost (127.0.0.1). Você pode descobrir o ip correto, utilizando o comando abaixo
+
+```docker inspect <containerNameOrId> | grep '"IPAddress"' | head -n 1```
